@@ -1,0 +1,56 @@
+/* SeismoAI Global Styles */
+:root {
+  --bg:        #080c18;
+  --surface:   #0f1729;
+  --surface2:  #162035;
+  --surface3:  #1a2540;
+  --border:    #1e2d45;
+  --border2:   #243550;
+
+  --teal:      #00e5c3;
+  --teal-dim:  #00b89a;
+  --teal-glow: rgba(0, 229, 195, 0.15);
+  --red:       #ff4757;
+  --red-dim:   #cc3a46;
+  --red-glow:  rgba(255, 71, 87, 0.15);
+  --amber:     #ffa502;
+  --amber-dim: #cc8400;
+  --amber-glow:rgba(255, 165, 2, 0.15);
+  --green:     #2ed573;
+  --blue:      #1e90ff;
+  --purple:    #a55eea;
+
+  --text:      #e8edf5;
+  --text2:     #9aafc8;
+  --text3:     #5a6e8a;
+
+  --font-mono: 'Space Mono', monospace;
+  --font-ui:   'Syne', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.pulse-dot {
+  animation: pulseDot 2s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 currentColor; }
+  50%       { opacity: 0.6; box-shadow: 0 0 0 4px transparent; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
